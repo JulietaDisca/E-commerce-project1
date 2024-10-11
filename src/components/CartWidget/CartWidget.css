@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.CartWidget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+span{
+    position: relative;
+    /*::before agregarlo, con fondo blanco*/
+    z-index: 1;
+    bottom: 0.7rem;
+    right: 1rem;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.08);
+    font-size: 0.95rem;
+    padding: 1px 5.2px;
+    margin: 0.3rem;
+    border: 0.1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.45s;
+}
+
+/*#a9a6a7*/
+span:hover{
+    transform: scale(1.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);;
+
+    /*
+    ****
+    ********
+    Hacerle un box-shadow por dentro igual, o 
+    ponerlo al boton de un color muy clarito, como el border
+    *******
+    ****
+    **/
+}

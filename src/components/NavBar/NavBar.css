@@ -1,3 +1,50 @@
-.Navbar{
-    width: 100%;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+.Navbar{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 1rem 4rem;
+}
+
+ul{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul li{
+    list-style: none;
+    padding: 7px 14px;
+    margin: 5px;
+    background: #fff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.7s, box-shadow 0.45s ease, transform 0.2s;
+}
+
+ul li:hover{
+    /*background-image: linear-gradient(135deg, #6e3aff, #ff38a1, #ffc100, #00d0ff);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;*/
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(0.95);
+}
+
+ul li:nth-child(5){
+    box-shadow: none;
+}
+
+/*linear-gradient(135deg, #6e3aff, #ff38a1, #ffc100, #00d0ff)
+#a9a6a7*/
