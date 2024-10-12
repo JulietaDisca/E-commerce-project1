@@ -1,7 +1,11 @@
-import React from 'react'
-import ItemList from '../ItemList/ItemList'
+import "./ItemListContainer.css";
 
-import { useState, useEffect } from 'react'
+const ItemListContainer = () => {
+  return (
+    <div className="ItemListContainer">
+        <h2 className="ItemListContainer-h2">Greetings for everybody!</h2>
+    </div>
+  )
+}
 
-import './ItemListContainer.css'
-
+export default ItemListContainer

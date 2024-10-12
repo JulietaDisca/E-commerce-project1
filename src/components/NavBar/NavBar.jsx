@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <nav className='Navbar'>
       <ul>
-        <li><AppleIcon/></li>
+        <li><AppleIcon style={{fontSize: 28}}/></li>
         <li>iPhone</li>
         <li>AirPods</li>
         <li>Watch</li>
