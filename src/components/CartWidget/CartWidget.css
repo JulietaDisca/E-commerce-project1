@@ -12,7 +12,7 @@
 }
 
 
-span{
+.cart-num{
     position: relative;
     /*::before agregarlo, con fondo blanco*/
     z-index: 10;
@@ -28,7 +28,7 @@ span{
     transition: transform 0.3s, box-shadow 0.45s;
 }
 
-span::before{
+.cart-num::before{
     content: '';
     background: white;
     position: absolute;
@@ -43,7 +43,7 @@ span::before{
 }
 
 /*#a9a6a7*/
-span:hover{
+.cart-num:hover{
     transform: scale(1.3);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);;
 

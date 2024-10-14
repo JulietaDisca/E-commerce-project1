@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.itemCount{
+    display: grid;
+    text-align: center;
+    grid-template-areas: 
+        "count count"
+        "button-decrement button-increment"
+        "button-addCart button-addCart";
+    grid-gap: 8px;
+    width: 30%;
+}
+
+#count{
+    grid-area: count;
+    border-radius: 5px;
+    padding: 5px 0;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    cursor: auto;
+}
+
+#button-increment{
+    grid-area: button-increment;
+}
+
+#button-decrement{
+    grid-area: button-decrement;
+}
+
+#button-addCart{
+    grid-area: button-addCart;
+    color: #fff;
+    border-radius: 5px;
+    background: rgb(0, 113, 227);
+    padding: 7px 0;
+}
+
+
+.button-control{
+    color: black;
+    font-size: 17px;
+    padding: 3px 0;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    background-color: rgb(52, 141, 230);
+}
+
+/*
+rgb(0, 113, 227)
+#0077ED
+#006EDB
+*/

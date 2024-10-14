@@ -5,7 +5,7 @@ const CartWidget = () => {
   return (
     <div className="CartWidget">
         <ShoppingCartIcon className='shoppingCartIcon' style={{fontSize: 30}}/>
-        <span>9</span>
+        <span className='cart-num'>9</span>
     </div>
   )
 }
