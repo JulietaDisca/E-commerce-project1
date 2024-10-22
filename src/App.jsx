@@ -1,17 +1,33 @@
 import './App.css'
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+//Components
 import React from 'react'
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ProductPage from './components/ProductPage/ProductPage';
+
+//Pages
+import AppleIcon from './pages/AppleIcon';
+import Iphones from './pages/Iphones';
+import AirPods from './pages/AirPods';
+import Watches from './pages/Watches';
+import Cart from './pages/Cart';
 
 const App = () => {
   return(
-    <div className='App'>
-      <NavBar/>
-      <ItemListContainer />
-      <ProductPage />
-    </div>
+    <Router>
+      <div className='App'>
+        <NavBar/>
+        <Routes>
+          <Route path='/' element={<AppleIcon/>} />
+          <Route path='/iphones' element={<Iphones/>} />
+          <Route path='/airpods' element={<AirPods/>} />
+          <Route path='/watches' element={<Watches/>} />
+          <Route path='/cart' element={<Cart/>} />
+        </Routes>
+        <h1>Hola mundo</h1>
+      </div>
+    </Router>
   ) 
 }
 
