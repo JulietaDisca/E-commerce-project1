@@ -9,11 +9,11 @@ const NavBar = () => {
   return (
     <nav className='Navbar'>
       <ul>
-        <Link to="/" ><AppleIcon style={{fontSize: 28}}/></Link>
-        <Link to="/iphones" >iPhones</Link>
-        <Link to="/airpods" >AirPods</Link>
-        <Link to="/watches" >Watches</Link>
-        <Link to="/cart" ><CartWidget/></Link>
+        <Link className="li" to="/" ><AppleIcon style={{fontSize: 35}}/></Link>
+        <Link className="li" to="/iphones" >iPhones</Link>
+        <Link className="li" to="/airpods" >AirPods</Link>
+        <Link className="li" to="/watches" >Watches</Link>
+        <Link className="li" to="/cart" ><CartWidget/></Link>
       </ul>
     </nav>
   )

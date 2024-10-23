@@ -25,7 +25,6 @@ const App = () => {
           <Route path='/watches' element={<Watches/>} />
           <Route path='/cart' element={<Cart/>} />
         </Routes>
-        <h1>Hola mundo</h1>
       </div>
     </Router>
   ) 
