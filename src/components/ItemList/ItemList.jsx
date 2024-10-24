@@ -11,6 +11,8 @@ const ItemList = () => {
 
     console.log("products", products);
 
+
+    //https://api.mercadolibre.com/sites/MLA/search?q=iphone
     useEffect(() => {
         setLoading(true);
         fetch('https://api.mercadolibre.com/sites/MLA/search?q=iphone')

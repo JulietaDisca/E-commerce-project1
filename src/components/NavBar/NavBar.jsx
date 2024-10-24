@@ -10,10 +10,10 @@ const NavBar = () => {
     <nav className='Navbar'>
       <ul>
         <Link className="li" to="/" ><AppleIcon style={{fontSize: 35}}/></Link>
-        <Link className="li" to="/iphones" >iPhones</Link>
-        <Link className="li" to="/airpods" >AirPods</Link>
-        <Link className="li" to="/watches" >Watches</Link>
-        <Link className="li" to="/cart" ><CartWidget/></Link>
+        <Link className="li" to="/category/iphones" >iPhones</Link>
+        <Link className="li" to="/category/airpods" >AirPods</Link>
+        <Link className="li" to="/category/watches" >Watches</Link>
+        <Link className="li" to="/category/cart" ><CartWidget/></Link>
       </ul>
     </nav>
   )

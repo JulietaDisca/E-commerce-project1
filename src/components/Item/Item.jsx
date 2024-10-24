@@ -44,10 +44,17 @@
 // export default Item;
 
 import './Item.css';
+import { useNavigate } from 'react-router-dom'
 
 const Item = ({ product }) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/item/${product.id}`);
+    }
+
     return(
-        <div className="product-card">
+        <div onClick={handleClick} className="product-card">
             <img src={product.thumbnail} alt={product.title} />
             <h2>{product.title}</h2>
             <p>Condition: {product.condition}</p>
