@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //Components
 import React from 'react'
 import NavBar from './components/NavBar/NavBar';
+import { CartProvider } from './context/cartContext';
 
 //Pages
 import AppleIcon from './pages/AppleIcon';
@@ -16,20 +17,22 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 
 const App = () => {
   return(
-    <Router>
-      <div className='App'>
-        <NavBar/>
-        <Routes>
-          <Route path='/' element={<AppleIcon/>} />
-          <Route path='/category/iphones' element={<Iphones/>} />
-          <Route path='/category/airpods' element={<AirPods/>} />
-          <Route path='/category/watches' element={<Watches/>} />
-          <Route path='/category/cart' element={<Cart/>} />
-          <Route path='/item/:id' element={<ItemDetailContainer/>} />
-          <Route path='/category/:categoryId' element={<Iphones/>} />
-        </Routes>
-      </div>
-    </Router>
+    <CartProvider >
+      <Router>
+        <div className='App'>
+          <NavBar/>
+          <Routes>
+            <Route path='/' element={<AppleIcon/>} />
+            <Route path='/category/iphones' element={<Iphones/>} />
+            <Route path='/category/airpods' element={<AirPods/>} />
+            <Route path='/category/watches' element={<Watches/>} />
+            <Route path='/category/cart' element={<Cart/>} />
+            <Route path='/item/:id' element={<ItemDetailContainer/>} />
+            <Route path='/category/:categoryId' element={<Iphones/>} />
+          </Routes>
+        </div>
+      </Router>
+    </CartProvider>
   ) 
 }
 

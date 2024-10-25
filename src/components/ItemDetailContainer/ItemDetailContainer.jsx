@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useCart } from '../../context/cartContext'
 
 import Spinner from '../Spinner/Spinner';
 import ProductPage from '../ProductPage/ProductPage';
@@ -7,6 +8,7 @@ import ProductPage from '../ProductPage/ProductPage';
 const ItemDetailContainer = () => {
     const {id} = useParams();
     const navigate = useNavigate();
+    const { addItem } = useCart(); //Desestructuramos addItem del contexto
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -42,9 +44,11 @@ const ItemDetailContainer = () => {
             })
     }, [id]);
 
-    const handleAddToCart = (count) => {
-        console.log(count > 1 ? `${count} products were added to the cart` : `${count} product added to cart` );
-        navigate('/category/cart'); //Redirigirte directamente a la pagina del carrito
+    const handleAddToCart = (quantity) => {
+        if (product) {
+            addItem(product, quantity); //Usamos el contexto para agregar el roducto al carrito
+            navigate('/category/cart'); //Redirigir al carrito
+        }
     };
 
     if(loading) return <Spinner />;
@@ -61,7 +65,7 @@ const ItemDetailContainer = () => {
             <img src={product.thumbnail} alt={product.title} />
             <ProductPage onAddToCart={handleAddToCart} />
         </div>
-    )
-}
+    );
+};
 
 export default ItemDetailContainer;
