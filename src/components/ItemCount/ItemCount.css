@@ -12,7 +12,9 @@
         "button-decrement button-increment"
         "button-addCart button-addCart";
     grid-gap: 8px;
-    width: 30%;
+    justify-content: center;
+    padding: 7px 5px;
+    margin: 10px auto;
 }
 
 #count{
@@ -21,6 +23,7 @@
     padding: 5px 0;
     border: 1px solid rgba(0, 0, 0, 0.3);
     cursor: auto;
+    width: 40vh;
 }
 
 #button-increment{

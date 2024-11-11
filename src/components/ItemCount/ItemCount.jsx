@@ -2,7 +2,7 @@ import "./ItemCount.css";
 
 import {useState} from 'react';
 
-const ItemCount = ({stock, onAdd}) => {
+const ItemCount = ({stock, onAdd, product}) => {
     const [count, setCount] = useState(1);
 
     const handleIncrement = () => {
@@ -25,7 +25,9 @@ const ItemCount = ({stock, onAdd}) => {
 
     return (
         <div className="itemCount">
-            <button id="button-decrement" className="button-control"
+            <button 
+                id="button-decrement" 
+                className="button-control"
                 onClick={handleDecrement}
                 disabled=  {count === 1}
                 style={{
@@ -66,3 +68,4 @@ const ItemCount = ({stock, onAdd}) => {
 export default ItemCount;
 
 //{stock > 0 ? "Add to Cart" : "Out of Stock"}
+

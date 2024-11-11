@@ -15,7 +15,9 @@ const Cart = () => {
                     {cartItems.map((item, index) => (
                         <li key={index}>
                             <h2>{item.title}</h2>
+                            <img src={item.thumbnail} alt={item.title} />
                             <p>Price ${ item.price}</p>
+                            <p>Cantidad {item.quantity}</p>
                             <button onClick={() => removeItem(item.id)}>Eliminar</button>
                         </li>
                     ))}

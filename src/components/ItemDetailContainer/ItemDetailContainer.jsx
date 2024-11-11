@@ -1,3 +1,4 @@
+import './ItemDetailContainer.css';
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useCart } from '../../context/cartContext'
@@ -59,13 +60,22 @@ const ItemDetailContainer = () => {
 
     return (
         <div className='ItemDetailContainer'>
-            <h1>{product.title}</h1>
-            <p>{product.condition}</p>
-            <p>Price: ${product.price}</p>
-            <img src={product.thumbnail} alt={product.title} />
-            <ProductPage onAddToCart={handleAddToCart} />
+            <h1 className='product detailsTitle'>{product.title}</h1>
+            <img className='product detailsImg' src={product.thumbnail} alt={product.title} />
+            <div className='details'>
+                <p className='detail detailsColor' >COLOR : {product.color}</p>
+                <p className='detail detailsCondition' >CONDITION : {product.condition}</p>
+                <p className='detail detailsProcessor' >PROCESSOR : {product.processor}</p>
+                <p className='detail detailsWeight' >WEIGHT : {product.weight}</p>
+            </div>
+            <h3 className='price detailsPrice' >Price: ${product.price.toLocaleString()}</h3>
+            {product.originalPrice && (
+                <p className='price detailsOriginalPrice'>${product.originalPrice.toLocaleString()}</p>
+            )}
+            <ProductPage className='productPage' onAddToCart={handleAddToCart} />
         </div>
     );
 };
 
 export default ItemDetailContainer;
+

@@ -3,6 +3,7 @@ import './ItemList.css';
 import { useState, useEffect } from 'react';
 import Item from '../Item/Item';
 import Spinner from '../Spinner/Spinner';
+import ProductPage from '../ProductPage/ProductPage';
 
 const ItemList = () => {
     const [products, setProducts] = useState([]);
@@ -49,6 +50,7 @@ const ItemList = () => {
                 <div key={product.id}>
                     <div className='container-picture-card'>
                         <Item product={product} />
+                        {/* <ProductPage  key={product.id} availableQuantity={product.available_quantity}/> */}
                     </div>
                 </div>
             ))}

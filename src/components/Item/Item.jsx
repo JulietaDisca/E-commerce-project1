@@ -63,7 +63,6 @@ const Item = ({ product }) => {
                 <p className='original-price'>${product.originalPrice.toLocaleString()}</p>
             )}
             <p>Color: {product.color ? product.color : "-" }</p>
-            <p>Processor: {product.processor ? product.processor : "-" }</p>
             <a href={product.permalink} target='_blank' rel='noopener noreferrer'>View Product</a>
         </div>
     );

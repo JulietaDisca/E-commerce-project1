@@ -11,7 +11,9 @@ export const CartProvider = ({ children }) => {
         if(isInCart(item.id)){
             //Si el producto ya está en el carrito, actualiza la cantidad
             setCartItems(cartItems.map(cartItem => 
-                cartItem.id === item.id ? {...cartItem, quantity: cartItem.quantity + quantity} : cartItem
+                cartItem.id === item.id 
+                    ? {...cartItem, quantity: cartItem.quantity + quantity} 
+                    : cartItem
             ));
         } else {
             //Si no está en el carrito, agregalo como un nuevo item
@@ -41,5 +43,7 @@ export const CartProvider = ({ children }) => {
     );
 };
 
-//Hook para usal el context más facilmente en los componentes
+//Hook para usar el context más facilmente en los componentes
 export const useCart = () => useContext(CartContext);
+
+

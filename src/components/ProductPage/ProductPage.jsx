@@ -2,12 +2,12 @@ import React from 'react'
 
 import ItemCount from '../ItemCount/ItemCount'
 
-const ProductPage = ({ onAddToCart }) => {
+const ProductPage = ({ onAddToCart, available_quantity }) => {
+    //const stock = {available_quantity};
     const stock = 10;
 
     return (
         <div className='ProductPage'>
-            <h2>Producto 1</h2>
             <ItemCount 
                 stock= {stock}
                 onAdd={onAddToCart}
@@ -17,3 +17,4 @@ const ProductPage = ({ onAddToCart }) => {
 }
 
 export default ProductPage;
+
