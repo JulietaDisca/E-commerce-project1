@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     align-items: center;
     border: 2px solid #ccc;
     border-radius: 7px;
@@ -40,8 +41,8 @@
     align-items: center;
     flex-direction: column;
     width: 54%;
-    margin: 10px auto;
-    padding: 10px 4px;
+    margin: 1.5rem auto 3rem auto;
+    padding: 21px 4px;
     text-align: center;
 }
 

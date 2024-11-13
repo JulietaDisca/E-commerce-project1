@@ -2,18 +2,24 @@ import "./ItemCount.css";
 
 import {useState} from 'react';
 
-const ItemCount = ({stock, onAdd, product}) => {
+const ItemCount = ({ onAdd, onCountChange}) => {
     const [count, setCount] = useState(1);
+
+    const stock = 10;
 
     const handleIncrement = () => {
         if (count < stock){
-            setCount(count + 1)
+            const newCount = count + 1;
+            setCount(newCount);
+            onCountChange(newCount); //Llama a onCountChange con la nueva cantidad
         }
     };
 
     const handleDecrement = () => {
         if (count > 1){
-            setCount(count - 1)
+            const newCount = count - 1;
+            setCount(newCount);
+            onCountChange(newCount); //Llama a onCountChange con la nueva cantidad
         };
     };
 
@@ -25,6 +31,7 @@ const ItemCount = ({stock, onAdd, product}) => {
 
     return (
         <div className="itemCount">
+            {/* Boton de decremento */}
             <button 
                 id="button-decrement" 
                 className="button-control"
@@ -39,6 +46,7 @@ const ItemCount = ({stock, onAdd, product}) => {
 
             <span id="count" className="count">{count}</span>
 
+            {/*Botón de incremento */}
             <button 
                 id="button-increment" 
                 className="button-control"
@@ -51,7 +59,10 @@ const ItemCount = ({stock, onAdd, product}) => {
                 > + 
             </button>
 
-            <button id="button-addCart" className="button-addCart"
+            {/* Botón para agregar al carrito */}
+            <button 
+                id="button-addCart" 
+                className="button-addCart"
                 onClick={handleAddToCart}
                 disabled= {stock === 0}
                 style={{

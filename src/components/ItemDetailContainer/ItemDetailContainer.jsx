@@ -47,7 +47,7 @@ const ItemDetailContainer = () => {
 
     const handleAddToCart = (quantity) => {
         if (product) {
-            addItem(product, quantity); //Usamos el contexto para agregar el roducto al carrito
+            addItem(product, quantity); //Usamos el contexto para agregar el producto al carrito
             navigate('/category/cart'); //Redirigir al carrito
         }
     };
@@ -68,11 +68,16 @@ const ItemDetailContainer = () => {
                 <p className='detail detailsProcessor' >PROCESSOR : {product.processor}</p>
                 <p className='detail detailsWeight' >WEIGHT : {product.weight}</p>
             </div>
-            <h3 className='price detailsPrice' >Price: ${product.price.toLocaleString()}</h3>
+            {/* <h3 className='price detailsPrice' >Price: ${product.price.toLocaleString()}</h3>
             {product.originalPrice && (
                 <p className='price detailsOriginalPrice'>${product.originalPrice.toLocaleString()}</p>
-            )}
-            <ProductPage className='productPage' onAddToCart={handleAddToCart} />
+            )} */}
+            <ProductPage 
+                className='productPage' 
+                onAddToCart={handleAddToCart} 
+                stock={product.availableQuantity} 
+                price={product.price} 
+            />
         </div>
     );
 };

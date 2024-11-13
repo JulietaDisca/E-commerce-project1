@@ -1,14 +1,14 @@
 import React from 'react'
 
-import { useCart } from '../context/cartContext';
+// import { useCart } from '../context/cartContext';
+import CartProducts from '../components/CartProducts/CartProducts'
 
 const Cart = () => {
-    const { cartItems, removeItem, clear} = useCart();
+    // const { cartItems, removeItem, clear} = useCart();
 
     return (
         <div className='Cart'>
-            <h1>Carrito de Compras</h1>
-            {cartItems.length === 0 ? (
+            {/* {cartItems.length === 0 ? (
                 <p>No hay productos en el carrito </p>
             ) : (
                 <ul>
@@ -22,8 +22,9 @@ const Cart = () => {
                         </li>
                     ))}
                 </ul>
-            )}
-            <button onClick={clear}>Vaciar Carrito</button>
+            )} */}
+            <CartProducts/>
+            {/* <button onClick={clear}>Vaciar Carrito</button> */}
         </div>
     )
 }

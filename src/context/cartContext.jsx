@@ -9,15 +9,18 @@ export const CartProvider = ({ children }) => {
     //Agregar un producto al carrito
     const addItem = (item, quantity) => {
         if(isInCart(item.id)){
-            //Si el producto ya está en el carrito, actualiza la cantidad
+            //Si el producto ya está en el carrito, actualiza la cantidad y el precio total
             setCartItems(cartItems.map(cartItem => 
                 cartItem.id === item.id 
-                    ? {...cartItem, quantity: cartItem.quantity + quantity} 
+                    ? {...cartItem, 
+                        quantity: cartItem.quantity + quantity,
+                        totalPrice: (cartItem.quantity + quantity) * cartItem.price  //Actualiza precio total
+                    } 
                     : cartItem
             ));
         } else {
             //Si no está en el carrito, agregalo como un nuevo item
-            setCartItems([...cartItems, {...item, quantity }]);
+            setCartItems([...cartItems, {...item, quantity, totalPrice: quantity * item.price }]);
         }
     };
 
