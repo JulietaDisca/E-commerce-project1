@@ -3,7 +3,6 @@ import './ItemList.css';
 import { useState, useEffect } from 'react';
 import Item from '../Item/Item';
 import Spinner from '../Spinner/Spinner';
-import ProductPage from '../ProductPage/ProductPage';
 
 const ItemList = () => {
     const [products, setProducts] = useState([]);

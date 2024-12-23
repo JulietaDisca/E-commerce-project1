@@ -13,6 +13,7 @@ import Iphones from './pages/Iphones';
 import AirPods from './pages/AirPods';
 import Watches from './pages/Watches';
 import Cart from './pages/Cart';
+
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 const App = () => {

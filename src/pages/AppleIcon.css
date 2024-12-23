@@ -1,0 +1,42 @@
+.containerAppleIcon1{
+    margin: 45px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.3);;
+    height: 45vh;
+}
+
+.container_h3_btn{
+    padding: 65px;
+    width: 70%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.btn_seemore{
+    background-color: black;
+    color: #fff;
+    border: black;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 25px;
+    margin-right: 12px;
+    padding: 10px;
+    border-radius: 7px;
+    transition: all 0.3s;
+}
+
+.btn_seemore:hover{
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.img1{
+    margin: 10px;
+    width: 75%;
+    height: 42vh;
+    border-radius: 7px;
+}

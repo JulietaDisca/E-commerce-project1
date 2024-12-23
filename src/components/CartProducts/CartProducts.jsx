@@ -29,8 +29,8 @@ const CartProducts = () => {
                     ))}
                 </ul>
             )}
-            <div className='containerBtn'>
-                <button className='btnEmptyCart' onClick={clear}>{cartItems.length === 0 ? null : "Empty Cart"}</button>
+            <div className='containerBtn>'>
+                <button className={cartItems.length === 0 ? '' : 'btnEmptyCart'} onClick={clear}>{cartItems.length === 0 ? null : "Empty Cart"}</button>
             </div>
         </div>
     )
